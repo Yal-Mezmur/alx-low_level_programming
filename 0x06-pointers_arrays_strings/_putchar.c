@@ -2,8 +2,8 @@
 
 /**
 *_putchar - write the character c to stdout
-*@c:The character to print
-*Return:1 On success
+*@c:char to printed
+*Return: 1 On success
 */
 int_putchar(char c)
 {
