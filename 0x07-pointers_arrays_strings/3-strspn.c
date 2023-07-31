@@ -1,27 +1,26 @@
 #include "main.h"
+
 /**
- * _strspn - Entry point
- * @s: input
- * @accept: input
- * Return: Always 0 (Success)
+ * _strchr - locates a character in a string
+ *
+ * @c: occurrence of the character
+ *
+ * @s: in the string
+ *
+ * Return: a pointer to the first occurrence of the character
  */
-unsigned int _strspn(char *s, char *accept)
+
+char *_strchr(char *s, char c)
 {
-        unsigned int n = 0;
-        int r;
-        while (*s)
-        {
-                for (r = 0; accept[r]; r++)
-                {
-                        if (*s == accept[r])
-                        {
-                                n++;
-                                break;
-                        }
-                        else if (accept[r + 1] == '\0')
-                                return (n);
-                }
-                s++;
-        }
-        return (n);
+	while (*s)
+	{
+		if (*s != c)
+			s++;
+		else
+			return (s);
+	}
+	if (c == '\0')
+		return (s);
+
+	return (NULL);
 }
